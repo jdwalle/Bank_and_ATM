@@ -1,0 +1,8 @@
+# Shell script for testing
+make clean
+make
+rm /opt/test/initialize.bank
+rm /opt/test/initialize.atm
+./bin/init /opt/test/initialize
+./bin/router &
+./bin/bank ./test/initialize.bank
